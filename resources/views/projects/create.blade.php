@@ -148,6 +148,29 @@
                 <input type="hidden" name="user" value="{{ auth()->user()->username }}">
             @endauth
 
+            {{-- Monto --}}
+            <div class="mb-5">
+                <label for="amount" class="mb-2 block uppercase text-gray-500 font-bold">
+                    Monto:
+                </label>
+                <input
+                    id="amount"
+                    name="amount"
+                    type="number"
+                    placeholder="Monto del Proyecto"
+                    class="border p-3 w-full rounded-lg @error('amount')
+                        border-red-500
+                    @enderror"
+                    value="{{ old('amount') }}"
+                />
+                @error('amount')
+                    <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2">
+                        {{ $message }}
+                    </p>
+                @enderror
+            </div>
+
+
 
             <input type="submit" value="Crear Proyecto" class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full text-white rounded-lg">
         </form>

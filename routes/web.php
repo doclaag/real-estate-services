@@ -41,9 +41,9 @@ Route::get('/dashboard/{user:username}', function () {
 
 // Project
 Route::get('/{user:username}/proyectos', [ProjectController::class, 'index'])->name('projects.index');
-Route::get('/{user:username}/crear-proyecto', [ProjectController::class, 'create'])->name('projects.create'); // Cambiado a "create"
+Route::get('/{user:username}/crear-proyecto', [ProjectController::class, 'create'])->name('projects.create');
 Route::post('/{user:username}/crear-proyecto', [ProjectController::class, 'store']);
 
-Route::get('/{user:username}/proyectos/editar/{project}', [ProjectController::class, 'edit'])->name('projects.edit'); // Cambiado a "proyectos"
-Route::patch('/{user:username}/proyectos/{project}', [ProjectController::class, 'update'])->name('projects.update'); // Usar "patch" en lugar de "put"
+Route::get('/{user:username}/proyectos/editar/{project}', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::patch('/{user:username}/proyectos/{project}', [ProjectController::class, 'update'])->name('projects.update');
 Route::delete('/{user:username}/proyectos/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
