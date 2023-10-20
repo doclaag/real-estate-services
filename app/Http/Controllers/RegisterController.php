@@ -32,9 +32,15 @@ class RegisterController extends Controller
             'password' => $request->password,
         ]);
 
+        // Authenticate User
+        auth()->attempt([
+            'email'=>$request->email,
+            'password'=>$request->password,
+        ]);
+
 
         // Redirect
-        return redirect()->route('welcome');
+        return redirect()->route('dashboard', auth()->user()->username);
     }
 
 
