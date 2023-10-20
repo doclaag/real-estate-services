@@ -14,12 +14,12 @@
                 <p class="text-gray-700 text-2xl">{{ auth()->user()->username }}</p>
                 <p class="text-gray-800 text-xl font-bold mb-5">{{ auth()->user()->name }}</p>
                 <div class="mt-5">
-                    <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                    <a href="{{ route('projects.index', ['user' => auth()->user()->username]) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
                         Lista Proyectos
                     </a>
                 </div>
                 <div class="mt-5">
-                    <a href="#" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                    <a href="{{ route('projects.create', ['user' => auth()->user()->username]) }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
                         Agregar Proyecto
                     </a>
                 </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Registro
+    Bienvenidos
 @endsection
 
 @section('content')

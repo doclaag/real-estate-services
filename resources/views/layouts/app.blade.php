@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <title>Servicio Inmobiliario - @yield('title')</title>
         <script src="{{ asset('js/app.js') }}" defer></script>
         @vite('resources/css/app.css')
+
+        <title>Servicio Inmobiliario - @yield('title')</title>
     </head>
     <body class="bg-gray-100">
         <header class="p-5 border-b bg-white shadow">
